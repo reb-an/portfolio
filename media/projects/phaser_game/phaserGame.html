@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8">
+	<title>Buspro</title>
+
+	<!--Pour l'ajustement sur les périphériques mobiles-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+	
+	<!--Style pour le body-->
+	<style type="text/css">
+        
+        @font-face {
+            font-family: tamuragaki;
+            src: url('medias/fonts/Tamuragaki-2O1je.ttf');
+            font-weight:400;
+            font-weight: normal;
+        }
+		
+		* {
+			padding: 0px;
+			margin: 0px;
+		}
+        
+        body {
+            /* max-width: fit-content; */
+			/* min-height: 100vh; */
+			width: 100vw;
+			height: 100vh;
+			background-color: rgb(82, 71, 55);
+        }
+		canvas {
+			min-width: 100%;
+			min-height:100%;
+			object-fit: cover;
+		}
+        #orientation {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-image: url(medias/img/mettrePortrait.png);
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center center;
+/*			background-color: #EBBD8A;*/
+			background-color: #D9ECD0;
+			z-index: 1000;
+			display: none;
+		}
+		
+	</style>
+
+</head>
+
+<body style="font-family: tamuragaki">
+    <!--div Pour signaler à l'utilisateur qu'il ne tient pas son périphérique dans le bon sens -->
+    <div id="orientation"></div>
+    
+	<!--Intégration des scripts-->
+    <!--Les fonts...-->
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+
+	<!--Intégration de la librairie Phaser à partir d'un serveur CDN-->
+	<script src="//cdn.jsdelivr.net/npm/phaser@3.16.2/dist/phaser.js"></script>
+	<!--<script src="lib/phaser.js"></script>-->
+
+	<!--Scripts du jeu / Module principal...-->
+	<script src="js/phaserGame.js" type="module"></script>
+
+</body>
+
+</html>
